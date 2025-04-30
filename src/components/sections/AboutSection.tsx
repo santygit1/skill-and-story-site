@@ -1,6 +1,6 @@
 
 import { Button } from '../ui/button';
-import { download } from 'lucide-react';
+import { Download } from 'lucide-react';
 
 const AboutSection = () => {
   // This will be replaced with your actual resume file
@@ -56,7 +56,7 @@ const AboutSection = () => {
                 onClick={handleDownload}
               >
                 <a href={resumeUrl} download="Your_Name_Resume.pdf">
-                  <download className="h-5 w-5" />
+                  <Download className="h-5 w-5" />
                   Download Resume
                 </a>
               </Button>

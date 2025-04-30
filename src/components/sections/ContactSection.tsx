@@ -12,7 +12,7 @@ import { Button } from '../ui/button';
 import { Input } from '../ui/input';
 import { Textarea } from '../ui/textarea';
 import { useToast } from '@/hooks/use-toast';
-import { mail, phone, user } from 'lucide-react';
+import { Mail, Phone, User } from 'lucide-react';
 
 const ContactSection = () => {
   const { toast } = useToast();
@@ -62,9 +62,9 @@ const ContactSection = () => {
   };
 
   const contactDetails = [
-    { icon: mail, label: 'Email', value: 'contact@example.com' },
-    { icon: phone, label: 'Phone', value: '+1 (123) 456-7890' },
-    { icon: user, label: 'Website', value: 'www.example.com' },
+    { icon: Mail, label: 'Email', value: 'contact@example.com' },
+    { icon: Phone, label: 'Phone', value: '+1 (123) 456-7890' },
+    { icon: User, label: 'Website', value: 'www.example.com' },
   ];
 
   return (
