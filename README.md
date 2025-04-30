@@ -1,73 +1,69 @@
-# Welcome to your Lovable project
 
-## Project info
+# Modern Portfolio Website
 
-**URL**: https://lovable.dev/projects/4f5ccb0b-7843-4c1b-aa03-d1902e1b9e46
+A responsive personal portfolio website built with React, TypeScript, and Tailwind CSS, featuring a blog section, contact form, and user authentication.
 
-## How can I edit this code?
+## Features
 
-There are several ways of editing your application.
+- 📱 Fully responsive design across all devices
+- 🎨 Modern UI with elegant animations
+- 👤 About section with bio, skills and experience
+- 🖼️ Dynamic projects section to showcase your work
+- 📝 Blog section with authentication (login/register)
+- 📩 Contact form with EmailJS integration
+- 📄 Downloadable resume that can be updated for specific job descriptions
+- 🔄 Dynamic content that can be easily updated
 
-**Use Lovable**
+## Technologies Used
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/4f5ccb0b-7843-4c1b-aa03-d1902e1b9e46) and start prompting.
+- **React.js**: Frontend library for building user interfaces
+- **TypeScript**: Type-safe JavaScript for better development experience
+- **Tailwind CSS**: Utility-first CSS framework
+- **ShadCN UI**: Component library for elegant UI elements
+- **EmailJS**: For handling contact form submissions without a backend
+- **React Router**: For handling navigation and routing
+- **Framer Motion**: For smooth animations
+- **React Query**: For state management
 
-Changes made via Lovable will be committed automatically to this repo.
+## Getting Started
 
-**Use your preferred IDE**
+1. Clone the repository
+2. Install dependencies with `npm install`
+3. Start the development server with `npm run dev`
+4. Open your browser and navigate to `http://localhost:8080`
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## Customizing Content
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+The portfolio is designed to be easily customizable. Here's how to update different sections:
 
-Follow these steps:
+### Personal Information
+Edit the content in the components to update your name, bio, and contact information.
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+### Skills
+Update the `skillsData` array in `src/components/sections/SkillsSection.tsx` to reflect your own skills and proficiency levels.
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+### Projects
+Modify the `projectsData` array in `src/components/sections/ProjectsSection.tsx` to showcase your own projects, technologies, and links.
 
-# Step 3: Install the necessary dependencies.
-npm i
+### Blog
+Edit the blog posts in the `sampleBlogPosts` array in the blog-related components to add your own articles.
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+### Resume
+Replace the `public/resume.pdf` file with your own resume document for download functionality.
 
-**Edit a file directly in GitHub**
+## Contact Form Setup
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+To make the contact form fully functional:
 
-**Use GitHub Codespaces**
+1. Create an account on [EmailJS](https://www.emailjs.com/)
+2. Create a new service and template
+3. Update the `EMAILJS_SERVICE_ID`, `EMAILJS_TEMPLATE_ID`, and `EMAILJS_USER_ID` constants in the `EmailContact.tsx` component
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## License
 
-## What technologies are used for this project?
+This project is open source and available under the [MIT License](LICENSE).
 
-This project is built with:
+## Acknowledgments
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/4f5ccb0b-7843-4c1b-aa03-d1902e1b9e46) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+- ShadCN UI for the beautiful UI components
+- Lucide Icons for the icon set
