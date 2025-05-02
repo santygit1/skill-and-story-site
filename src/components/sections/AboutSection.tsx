@@ -33,11 +33,11 @@ const AboutSection = () => {
           
           <div className="space-y-6 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
             <h3 className="text-2xl font-bold">
-              I'm <span className="text-portfolio-accent">Santhosh Kumar</span>, a React Developer
+              I'm <span className="text-portfolio-accent">Santhosh Kumar</span>, a Full Stack Developer
             </h3>
             
             <p className="text-gray-700">
-              I'm a passionate frontend developer with expertise in building interactive user interfaces
+              I'm a passionate full stack developer with expertise in building interactive user interfaces
               using React and modern web technologies. With a strong foundation in JavaScript and a keen
               eye for design, I create engaging web experiences that users love.
             </p>

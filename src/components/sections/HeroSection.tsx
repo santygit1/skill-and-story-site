@@ -67,7 +67,7 @@ const HeroSection = () => {
           </h1>
           
           <p className="text-xl md:text-2xl text-gray-700 mb-8 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-            A passionate React developer specializing in building beautiful interfaces & user experiences
+            A passionate full stack developer specializing in building beautiful interfaces & user experiences
           </p>
           
           <div className="flex flex-col sm:flex-row justify-center gap-4 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
