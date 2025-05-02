@@ -63,7 +63,7 @@ const HeroSection = () => {
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="mb-6 animate-fade-in-up">
             <span className="block text-portfolio-dark">Hello, I'm</span>
-            <span className="text-portfolio-accent">Your Name</span>
+            <span className="text-portfolio-accent">Santhosh Kumar</span>
           </h1>
           
           <p className="text-xl md:text-2xl text-gray-700 mb-8 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>

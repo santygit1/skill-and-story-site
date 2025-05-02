@@ -33,7 +33,7 @@ const AboutSection = () => {
           
           <div className="space-y-6 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
             <h3 className="text-2xl font-bold">
-              I'm <span className="text-portfolio-accent">Your Name</span>, a React Developer
+              I'm <span className="text-portfolio-accent">Santhosh Kumar</span>, a React Developer
             </h3>
             
             <p className="text-gray-700">
@@ -55,7 +55,7 @@ const AboutSection = () => {
                 className="bg-portfolio-accent hover:bg-portfolio-blue flex items-center gap-2"
                 onClick={handleDownload}
               >
-                <a href={resumeUrl} download="Your_Name_Resume.pdf">
+                <a href={resumeUrl} download="Santhosh_Kumar_Resume.pdf">
                   <Download className="h-5 w-5" />
                   Download Resume
                 </a>
