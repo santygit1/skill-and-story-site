@@ -54,7 +54,7 @@ export default {
 					foreground: 'hsl(var(--card-foreground))'
 				},
 				portfolio: {
-					blue: '#3498db',
+					blue: '#1EAEDB',
 					dark: '#333333',
 					light: '#f8f9fa',
 					accent: '#0ea5e9',

@@ -24,11 +24,11 @@ const AboutSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div className="overflow-hidden rounded-lg shadow-lg animate-fade-in-up">
             <div className="h-96 w-full relative">
-              {/* Your profile photo */}
+              {/* Updated profile photo */}
               <img 
-                src="/profile-photo.jpg" 
+                src="/lovable-uploads/aa9a8458-e2b6-489d-8b36-4d8e62706bae.png" 
                 alt="Santhosh Kumar" 
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover object-center"
               />
             </div>
           </div>
@@ -40,7 +40,7 @@ const AboutSection = () => {
             
             <p className="text-gray-700">
               I'm a passionate full stack developer with a strong focus on building scalable, end-to-end web applications. 
-              I specialize in technologies like React, Tailwind CSS, Node.js, Express and MongoDB, crafting clean user 
+              I specialize in technologies like <span className="text-portfolio-accent">React, Tailwind CSS, Node.js, Express and MongoDB</span>, crafting clean user 
               interfaces and robust backend systems.
             </p>
             
