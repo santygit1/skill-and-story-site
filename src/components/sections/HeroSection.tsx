@@ -67,10 +67,6 @@ const HeroSection = () => {
             <span className="block text-portfolio-dark text-xl md:text-2xl mt-2">Full Stack Developer</span>
           </h1>
           
-          <p className="text-xl md:text-2xl text-gray-700 mb-8 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-            A passionate full stack developer specializing in building beautiful interfaces & user experiences
-          </p>
-          
           <div className="flex flex-col sm:flex-row justify-center gap-4 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
             <Button asChild size="lg" className="bg-portfolio-accent hover:bg-portfolio-blue">
               <a href="#projects">View My Work</a>
