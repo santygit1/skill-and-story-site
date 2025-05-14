@@ -4,6 +4,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Badge } from "../ui/badge";
 import { Button } from "../ui/button";
 import { useNavigate } from "react-router-dom";
+import { Image } from "lucide-react";
 
 interface BlogPost {
   id: string;
@@ -28,7 +29,7 @@ const sampleBlogPosts: BlogPost[] = [
     tags: ["React", "Hooks", "Frontend"],
     date: "2023-05-15",
     author: "Jane Doe",
-    imageUrl: "https://images.unsplash.com/photo-1518770660439-4636190af475",
+    imageUrl: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
   },
   {
     id: "2",
@@ -39,7 +40,7 @@ const sampleBlogPosts: BlogPost[] = [
     tags: ["Tailwind CSS", "Responsive Design", "Frontend"],
     date: "2023-06-22",
     author: "John Smith",
-    imageUrl: "https://images.unsplash.com/photo-1518770660439-4636190af475",
+    imageUrl: "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
   },
   {
     id: "3",
@@ -50,7 +51,7 @@ const sampleBlogPosts: BlogPost[] = [
     tags: ["React", "Redux", "State Management"],
     date: "2023-07-10",
     author: "Alex Johnson",
-    imageUrl: "https://images.unsplash.com/photo-1518770660439-4636190af475",
+    imageUrl: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7",
   },
   {
     id: "4",
@@ -61,7 +62,7 @@ const sampleBlogPosts: BlogPost[] = [
     tags: ["TypeScript", "React", "JavaScript"],
     date: "2023-08-05",
     author: "Maya Patel",
-    imageUrl: "https://images.unsplash.com/photo-1518770660439-4636190af475",
+    imageUrl: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6",
   },
 ];
 
@@ -97,7 +98,9 @@ const BlogPreviewSection = () => {
                       className="w-full h-full object-cover" 
                     />
                   ) : (
-                    <div className="flex items-center justify-center h-full text-gray-500">Blog Image</div>
+                    <div className="flex items-center justify-center h-full text-gray-500">
+                      <Image size={48} className="text-gray-400" />
+                    </div>
                   )}
                 </div>
               </div>
