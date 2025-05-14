@@ -121,11 +121,6 @@
   .section-title h2 {
     @apply inline-block relative;
   }
-
-  .section-title h2:after {
-    content: '';
-    @apply absolute bottom-0 left-1/2 w-16 h-1 bg-portfolio-accent -translate-x-1/2 mt-2;
-  }
   
   .text-highlight {
     @apply text-portfolio-accent;

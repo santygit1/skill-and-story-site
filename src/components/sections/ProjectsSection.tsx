@@ -20,7 +20,7 @@ const projectsData: Project[] = [
     id: 1,
     title: 'E-library Website',
     description: 'Built a responsive digital library using HTML, CSS and JavaScript, designed for easy book browsing and a smooth reading experience on all devices.',
-    image: '/elibrary-project.jpg', // You'll need to add this image
+    image: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b',
     tags: ['HTML', 'CSS', 'JavaScript', 'TailwindCSS'],
     codeUrl: 'https://github.com/yourusername/elibrary', // Replace with your actual GitHub URL
   },
@@ -28,7 +28,7 @@ const projectsData: Project[] = [
     id: 2,
     title: 'Intella Education Website',
     description: 'Worked closely with an amazing team to craft a responsive website for Intella Education using HTML, CSS, JavaScript and React.js.',
-    image: '/intella-project.jpg', // You'll need to add this image
+    image: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6',
     tags: ['HTML', 'CSS', 'JavaScript', 'React.js'],
     codeUrl: 'https://github.com/yourusername/intella-education', // Replace with your actual GitHub URL
   },
@@ -36,7 +36,7 @@ const projectsData: Project[] = [
     id: 3,
     title: 'Personal Portfolio Website',
     description: 'Built a personal portfolio using React.js, JavaScript, Tailwind CSS and Email.js to showcase my projects, skills, and full stack development experience with a clean, responsive design.',
-    image: '/portfolio-project.jpg', // You'll need to add this image
+    image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085',
     tags: ['JavaScript', 'React.js', 'Tailwind CSS', 'Email.js'],
     codeUrl: 'https://github.com/yourusername/portfolio', // Replace with your actual GitHub URL
   },
@@ -66,7 +66,7 @@ const ProjectsSection = () => {
               transition={{ duration: 0.5 }}
             >
               <div className="h-48 bg-gray-200 relative overflow-hidden">
-                {/* Project image - you'll need to add these images to your project */}
+                {/* Project image */}
                 <div className="absolute inset-0">
                   <img 
                     src={project.image} 

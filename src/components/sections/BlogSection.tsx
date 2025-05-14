@@ -28,7 +28,7 @@ const sampleBlogPosts: BlogPost[] = [
     tags: ["React", "Hooks", "Frontend"],
     date: "2023-05-15",
     author: "Jane Doe",
-    imageUrl: "/placeholder.svg",
+    imageUrl: "https://images.unsplash.com/photo-1518770660439-4636190af475",
   },
   {
     id: "2",
@@ -39,7 +39,7 @@ const sampleBlogPosts: BlogPost[] = [
     tags: ["Tailwind CSS", "Responsive Design", "Frontend"],
     date: "2023-06-22",
     author: "John Smith",
-    imageUrl: "/placeholder.svg",
+    imageUrl: "https://images.unsplash.com/photo-1518770660439-4636190af475",
   },
   {
     id: "3",
@@ -50,7 +50,7 @@ const sampleBlogPosts: BlogPost[] = [
     tags: ["React", "Redux", "State Management"],
     date: "2023-07-10",
     author: "Alex Johnson",
-    imageUrl: "/placeholder.svg",
+    imageUrl: "https://images.unsplash.com/photo-1518770660439-4636190af475",
   },
   {
     id: "4",
@@ -61,7 +61,7 @@ const sampleBlogPosts: BlogPost[] = [
     tags: ["TypeScript", "React", "JavaScript"],
     date: "2023-08-05",
     author: "Maya Patel",
-    imageUrl: "/placeholder.svg",
+    imageUrl: "https://images.unsplash.com/photo-1518770660439-4636190af475",
   },
 ];
 
@@ -77,8 +77,8 @@ const BlogPreviewSection = () => {
   return (
     <section id="blog" className="py-20 bg-white">
       <div className="section-container">
-        <div className="section-title">
-          <h2 className="mb-2">Blog</h2>
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-bold mb-4">Blog</h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
             Insights and tutorials on web development and design
           </p>
@@ -89,7 +89,7 @@ const BlogPreviewSection = () => {
             <Card key={post.id} className="overflow-hidden flex flex-col h-full hover:shadow-lg transition-shadow duration-300 animate-fade-in-up">
               <div className="h-48 bg-gray-200 relative">
                 {/* Post image */}
-                <div className="absolute inset-0 flex items-center justify-center text-gray-500">
+                <div className="absolute inset-0">
                   {post.imageUrl ? (
                     <img 
                       src={post.imageUrl} 
@@ -97,7 +97,7 @@ const BlogPreviewSection = () => {
                       className="w-full h-full object-cover" 
                     />
                   ) : (
-                    "Blog Image"
+                    <div className="flex items-center justify-center h-full text-gray-500">Blog Image</div>
                   )}
                 </div>
               </div>

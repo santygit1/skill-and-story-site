@@ -12,7 +12,7 @@ import { Button } from '../ui/button';
 import { Input } from '../ui/input';
 import { Textarea } from '../ui/textarea';
 import { useToast } from '@/hooks/use-toast';
-import { Mail, Phone, User } from 'lucide-react';
+import { Mail, Phone, Github, Linkedin } from 'lucide-react';
 
 const ContactSection = () => {
   const { toast } = useToast();
@@ -33,7 +33,16 @@ const ContactSection = () => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Here you would normally integrate with emailjs
+    // Here you would integrate with emailjs
+    // To integrate EmailJS, you need to:
+    // 1. Sign up at emailjs.com and create a service, template, and get your user ID
+    // 2. Install emailjs-com package (already installed in this project)
+    // 3. Replace the placeholders in EmailContact.tsx with your actual EmailJS credentials:
+    //    - EMAILJS_SERVICE_ID: Your EmailJS service ID
+    //    - EMAILJS_TEMPLATE_ID: Your EmailJS template ID
+    //    - EMAILJS_USER_ID: Your EmailJS user ID
+    // 4. Use the sendForm or send method from emailjs
+    
     try {
       // Simulating emailjs integration
       await new Promise(resolve => setTimeout(resolve, 1000));
@@ -62,16 +71,15 @@ const ContactSection = () => {
   };
 
   const contactDetails = [
-    { icon: Mail, label: 'Email', value: 'contact@example.com' },
-    { icon: Phone, label: 'Phone', value: '+1 (123) 456-7890' },
-    { icon: User, label: 'Website', value: 'www.example.com' },
+    { icon: Mail, label: 'Email', value: 'santy.santhoshkumar5002@gmail.com' },
+    { icon: Phone, label: 'Phone', value: '7305570956' },
   ];
 
   return (
     <section id="contact" className="py-20 bg-gray-50">
       <div className="section-container">
-        <div className="section-title">
-          <h2 className="mb-2">Get In Touch</h2>
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-bold mb-4">Get In Touch</h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
             Have a question or want to work together? Feel free to contact me!
           </p>
@@ -184,19 +192,14 @@ const ContactSection = () => {
               </CardHeader>
               <CardContent>
                 <div className="flex gap-4">
-                  <Button asChild variant="outline" size="icon">
+                  <Button asChild variant="outline" size="icon" className="p-2 h-10 w-10">
                     <a href="https://github.com" target="_blank" rel="noopener noreferrer">
-                      GitHub
+                      <Github className="h-5 w-5" />
                     </a>
                   </Button>
-                  <Button asChild variant="outline" size="icon">
+                  <Button asChild variant="outline" size="icon" className="p-2 h-10 w-10">
                     <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
-                      LinkedIn
-                    </a>
-                  </Button>
-                  <Button asChild variant="outline" size="icon">
-                    <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-                      Twitter
+                      <Linkedin className="h-5 w-5" />
                     </a>
                   </Button>
                 </div>
