@@ -3,8 +3,8 @@ import { Button } from '../ui/button';
 import { Download } from 'lucide-react';
 
 const AboutSection = () => {
-  // This will be replaced with your actual resume file
-  const resumeUrl = '/resume.pdf';
+  // This will be replaced with your actual final resume file
+  const resumeUrl = '/https://docs.google.com/document/d/1SeYZL9oWxpJfgMFXzbxCg84RL7n_abHp/edit?usp=drive_link&ouid=101457459427532664424&rtpof=true&sd=true';
   
   const handleDownload = () => {
     // In a real implementation, this could track the download event
@@ -21,6 +21,7 @@ const AboutSection = () => {
           </p>
         </div>
         
+        
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div className="overflow-hidden rounded-lg shadow-lg animate-fade-in-up">
             <div className="bg-gray-200 h-96 w-full relative">
@@ -33,19 +34,22 @@ const AboutSection = () => {
           
           <div className="space-y-6 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
             <h3 className="text-2xl font-bold">
-              I'm <span className="text-portfolio-accent">Your Name</span>, a React Developer
+              I'm <span className="text-portfolio-accent">Santhosh Kumar</span>, a Full Stack Developer
             </h3>
             
             <p className="text-gray-700">
-              I'm a passionate frontend developer with expertise in building interactive user interfaces
-              using React and modern web technologies. With a strong foundation in JavaScript and a keen
-              eye for design, I create engaging web experiences that users love.
+            I'm a passionate full stack developer skilled in building seamless web applications from front to back.
+            I work with modern technologies like React, Tailwind CSS, JavaScript, Bootstrap, EmailJS and LocalStorage to deliver responsive UIs, 
+            while also handling backend logic and integrations to ensure complete, user-centric solutions.
+
+
             </p>
             
             <p className="text-gray-700">
-              My journey in web development began over 5 years ago, and I've worked on various projects
-              ranging from small business websites to complex enterprise applications. I'm constantly
-              learning and adapting to new technologies to stay at the forefront of web development.
+            I'm a strategic, creative thinker with hands-on experience in marketing, operations and team coordination. 
+            I turn ideas into action building brand presence, streamlining processes and leading initiatives that drive growth with empathy, adaptability and impact.
+
+
             </p>
             
             <div className="pt-4">
@@ -55,7 +59,7 @@ const AboutSection = () => {
                 className="bg-portfolio-accent hover:bg-portfolio-blue flex items-center gap-2"
                 onClick={handleDownload}
               >
-                <a href={resumeUrl} download="Your_Name_Resume.pdf">
+                <a href={resumeUrl} download="final resume.pdf">
                   <Download className="h-5 w-5" />
                   Download Resume
                 </a>

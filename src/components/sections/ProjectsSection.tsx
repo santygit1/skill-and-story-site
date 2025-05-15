@@ -20,64 +20,64 @@ interface Project {
 const projectsData: Project[] = [
   {
     id: 1,
-    title: 'E-commerce Website',
-    description: 'A full-featured online store built with React, Redux, and Firebase',
+    title: 'E-library Website',
+    description: 'A smart e-library platform that lets users explore, read, and manage digital books seamlessly from any device.',
     image: '/placeholder.svg',
-    tags: ['React', 'Redux', 'Firebase', 'Stripe'],
-    demoUrl: 'https://example.com',
-    codeUrl: 'https://github.com',
+    tags: ['HTML', 'CSS', 'Javascript', 'local storage'],
+    // demoUrl: 'https://example.com',
+    codeUrl: 'https://github.com/santygit1/E-Library',
     category: 'web',
   },
   {
     id: 2,
-    title: 'Task Management App',
-    description: 'A productivity app for managing daily tasks and projects',
+    title: 'Personal portfolio Website',
+    description: 'Modern and responsive portfolio website built with React',
     image: '/placeholder.svg',
-    tags: ['React', 'TypeScript', 'Node.js', 'MongoDB'],
-    demoUrl: 'https://example.com',
-    codeUrl: 'https://github.com',
-    category: 'app',
+    tags: ['React', 'HTML', 'email.js', 'TailwindCSS'],
+    // demoUrl: 'https://example.com',
+    codeUrl: 'https://github.com/santygit1/skill-and-story-site',
+    category: 'web',
   },
   {
     id: 3,
-    title: 'Weather Dashboard',
-    description: 'Real-time weather forecast app with location detection',
+    title: 'Intella Education Website',
+    description: 'Built a responsive website for Intella Education using HTML, CSS and JavaScript enhancing my skills in teamwork, problem-solving, and clean UI development.',
     image: '/placeholder.svg',
-    tags: ['React', 'Weather API', 'Geolocation'],
-    demoUrl: 'https://example.com',
-    codeUrl: 'https://github.com',
+    tags: ['HTML','React', 'Google review API', 'Javascript'],
+    // demoUrl: 'https://example.com',
+    codeUrl: 'https://github.com/santygit1/vibrant-portfolio-kit',
     category: 'web',
   },
-  {
-    id: 4,
-    title: 'Portfolio Website',
-    description: 'Modern and responsive portfolio website built with React',
-    image: '/placeholder.svg',
-    tags: ['React', 'Tailwind CSS', 'Framer Motion'],
-    demoUrl: 'https://example.com',
-    codeUrl: 'https://github.com',
-    category: 'web',
-  },
-  {
-    id: 5,
-    title: 'Recipe Finder',
-    description: 'An app to discover and save cooking recipes from various cuisines',
-    image: '/placeholder.svg',
-    tags: ['React Native', 'API Integration', 'AsyncStorage'],
-    demoUrl: 'https://example.com',
-    codeUrl: 'https://github.com',
-    category: 'app',
-  },
-  {
-    id: 6,
-    title: 'Data Visualization Dashboard',
-    description: 'Interactive charts and graphs for business analytics',
-    image: '/placeholder.svg',
-    tags: ['React', 'D3.js', 'Node.js', 'Express'],
-    demoUrl: 'https://example.com',
-    codeUrl: 'https://github.com',
-    category: 'data',
-  },
+  // {
+  //   id: 4,
+  //   title: 'Portfolio Website',
+  //   description: 'Modern and responsive portfolio website built with React',
+  //   image: '/placeholder.svg',
+  //   tags: ['React', 'Tailwind CSS', 'Framer Motion'],
+  //   demoUrl: 'https://example.com',
+  //   codeUrl: 'https://github.com',
+  //   category: 'web',
+  // },
+  // {
+  //   id: 5,
+  //   title: 'Recipe Finder',
+  //   description: 'An app to discover and save cooking recipes from various cuisines',
+  //   image: '/placeholder.svg',
+  //   tags: ['React Native', 'API Integration', 'AsyncStorage'],
+  //   demoUrl: 'https://example.com',
+  //   codeUrl: 'https://github.com',
+  //   category: 'app',
+  // },
+  // {
+  //   id: 6,
+  //   title: 'Data Visualization Dashboard',
+  //   description: 'Interactive charts and graphs for business analytics',
+  //   image: '/placeholder.svg',
+  //   tags: ['React', 'D3.js', 'Node.js', 'Express'],
+  //   demoUrl: 'https://example.com',
+  //   codeUrl: 'https://github.com',
+  //   category: 'data',
+  // },
 ];
 
 // Import framer-motion for animations
@@ -88,12 +88,12 @@ const ProjectsSection = () => {
   
   const categories = [
     { id: 'all', name: 'All' },
-    { id: 'web', name: 'Web' },
-    { id: 'app', name: 'App' },
-    { id: 'data', name: 'Data' },
+  //   // { id: 'web', name: 'Web' },
+  //   // { id: 'app', name: 'App' },
+  //   // { id: 'data', name: 'Data' },
   ];
   
-  const filteredProjects = filter === 'all' 
+   const filteredProjects = filter === 'all' 
     ? projectsData 
     : projectsData.filter(project => project.category === filter);
   
@@ -103,7 +103,7 @@ const ProjectsSection = () => {
         <div className="section-title">
           <h2 className="mb-2">My Projects</h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            A showcase of my recent work and projects
+            A showcase of my works and projects
           </p>
         </div>
         

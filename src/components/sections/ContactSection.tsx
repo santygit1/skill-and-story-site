@@ -1,4 +1,5 @@
-
+import GitHubLogo from './assets/github-logo.png'; // Adjust the path as necessary
+import LinkedInLogo from './assets/linkedin-logo.png'; // Adjust the path as necessary
 import { useState } from 'react';
 import { 
   Card, 
@@ -62,8 +63,8 @@ const ContactSection = () => {
   };
 
   const contactDetails = [
-    { icon: Mail, label: 'Email', value: 'contact@example.com' },
-    { icon: Phone, label: 'Phone', value: '+1 (123) 456-7890' },
+    { icon: Mail, label: 'Email', value: 'santy.santhoshkumar5002@gmail.com' },
+    { icon: Phone, label: 'Phone', value: '+91 7305570956' },
     { icon: User, label: 'Website', value: 'www.example.com' },
   ];
 
@@ -194,11 +195,11 @@ const ContactSection = () => {
                       LinkedIn
                     </a>
                   </Button>
-                  <Button asChild variant="outline" size="icon">
+                  {/* <Button asChild variant="outline" size="icon">
                     <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
                       Twitter
                     </a>
-                  </Button>
+                  </Button> */}
                 </div>
               </CardContent>
             </Card>

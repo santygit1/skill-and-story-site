@@ -67,14 +67,14 @@ const Footer = () => {
               >
                 LinkedIn
               </a>
-              <a 
+              {/* <a 
                 href="https://twitter.com" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-gray-300 hover:text-portfolio-accent transition-colors"
               >
                 Twitter
-              </a>
+              </a> */}
             </div>
           </div>
         </div>
