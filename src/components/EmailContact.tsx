@@ -20,6 +20,19 @@ const EMAILJS_SERVICE_ID = "YOUR_SERVICE_ID"; // You'll need to replace this wit
 const EMAILJS_TEMPLATE_ID = "YOUR_TEMPLATE_ID"; // You'll need to replace this with your actual template ID
 const EMAILJS_USER_ID = "YOUR_USER_ID"; // You'll need to replace this with your actual user ID
 
+/**
+ * To integrate EmailJS:
+ * 1. Sign up at emailjs.com and create an account
+ * 2. Create a service (e.g., Gmail, Outlook, etc.)
+ * 3. Create an email template with variables like {{name}}, {{email}}, {{subject}}, {{message}}
+ * 4. Get your User ID from the integration section
+ * 5. Replace the placeholder constants above with your actual details:
+ *    - EMAILJS_SERVICE_ID: Your EmailJS service ID (e.g., "service_abc123")
+ *    - EMAILJS_TEMPLATE_ID: Your EmailJS template ID (e.g., "template_xyz789")
+ *    - EMAILJS_USER_ID: Your EmailJS user ID (e.g., "user_def456")
+ * 6. Uncomment the emailjs.sendForm code in the sendEmail function
+ */
+
 const EmailContact = () => {
   const { toast } = useToast();
   const formRef = useRef<HTMLFormElement>(null);

@@ -62,6 +62,7 @@ const HeroSection = () => {
       >
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="mb-6 animate-fade-in-up">
+<<<<<<< HEAD
             <span className="block text-portfolio-dark">Hello, I'm</span>
             <span className="text-portfolio-accent">Santhosh Kumar</span>
           </h1>
@@ -70,6 +71,13 @@ const HeroSection = () => {
           A passionate full stack developer crafting seamless web experiences from intuitive frontends to robust backends.
           </p>
           
+=======
+            <span className="block text-portfolio-dark mb-2">Hello, I'm</span>
+            <span className="text-portfolio-accent">Santhosh Kumar</span>
+            <span className="block text-portfolio-dark text-xl md:text-2xl mt-2">Full Stack Developer</span>
+          </h1>
+          
+>>>>>>> 44f48d7e783d01eb91f77065a1e06895f24a99f2
           <div className="flex flex-col sm:flex-row justify-center gap-4 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
             <Button asChild size="lg" className="bg-portfolio-accent hover:bg-portfolio-blue">
               <a href="#projects">View My Work</a>

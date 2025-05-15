@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 // import { useEffect, useRef } from 'react';
 // import { Card, CardContent } from '../ui/card';
 
@@ -113,10 +114,14 @@
 
 
 import { useEffect, useRef } from 'react';
+=======
+>>>>>>> 44f48d7e783d01eb91f77065a1e06895f24a99f2
 import { Card, CardContent } from '../ui/card';
 
-interface Skill {
+interface SkillCategory {
+  id: string;
   name: string;
+<<<<<<< HEAD
   category: 'frontend' | 'backend' | 'tools';
 }
 
@@ -173,19 +178,44 @@ const SkillsSection = () => {
     { id: 'tools', name: 'Tools & Others' }
   ];
   
+=======
+  skills: string[];
+}
+
+const skillsData: SkillCategory[] = [
+  {
+    id: 'frontend',
+    name: 'Frontend',
+    skills: ['HTML', 'CSS', 'JavaScript', 'React.js', 'Tailwind CSS', 'Material UI']
+  },
+  {
+    id: 'backend',
+    name: 'Backend',
+    skills: ['Node.js', 'Express.js', 'MongoDB', 'Firebase']
+  },
+  {
+    id: 'tools',
+    name: 'Tools & Others',
+    skills: ['Git & GitHub', 'VS Code', 'Postman', 'Netlify', 'Figma']
+  }
+];
+
+const SkillsSection = () => {
+>>>>>>> 44f48d7e783d01eb91f77065a1e06895f24a99f2
   return (
     <section id="skills" className="py-20 bg-gray-50">
-      <div className="section-container" ref={skillsRef}>
-        <div className="section-title">
-          <h2 className="mb-2">My Skills</h2>
+      <div className="section-container">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-bold mb-4">My Skills</h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
             Technologies and tools I work with
           </p>
         </div>
         
         <div className="space-y-12">
-          {categories.map((category) => (
+          {skillsData.map((category) => (
             <div key={category.id} className="animate-fade-in-up">
+<<<<<<< HEAD
               <h3 className="text-xl font-semibold mb-6">{category.name}</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {skillsData
@@ -201,6 +231,17 @@ const SkillsSection = () => {
                       </CardContent>
                     </Card>
                   ))}
+=======
+              <h3 className="text-xl font-semibold mb-6 text-center">{category.name}</h3>
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+                {category.skills.map((skill, index) => (
+                  <Card key={index} className="overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                    <CardContent className="p-4 text-center">
+                      <span className="font-medium">{skill}</span>
+                    </CardContent>
+                  </Card>
+                ))}
+>>>>>>> 44f48d7e783d01eb91f77065a1e06895f24a99f2
               </div>
             </div>
           ))}

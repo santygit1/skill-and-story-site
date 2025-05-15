@@ -1,5 +1,6 @@
 
 import { Link } from "react-router-dom";
+import { Github, Linkedin } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -55,18 +56,21 @@ const Footer = () => {
                 href="https://github.com" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="text-gray-300 hover:text-portfolio-accent transition-colors"
+                className="text-gray-300 hover:text-portfolio-accent transition-colors flex items-center gap-2"
               >
+                <Github className="h-5 w-5" />
                 GitHub
               </a>
               <a 
                 href="https://linkedin.com" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="text-gray-300 hover:text-portfolio-accent transition-colors"
+                className="text-gray-300 hover:text-portfolio-accent transition-colors flex items-center gap-2"
               >
+                <Linkedin className="h-5 w-5" />
                 LinkedIn
               </a>
+<<<<<<< HEAD
               {/* <a 
                 href="https://twitter.com" 
                 target="_blank" 
@@ -75,6 +79,8 @@ const Footer = () => {
               >
                 Twitter
               </a> */}
+=======
+>>>>>>> 44f48d7e783d01eb91f77065a1e06895f24a99f2
             </div>
           </div>
         </div>

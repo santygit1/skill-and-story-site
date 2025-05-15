@@ -7,6 +7,7 @@ import { Input } from '@/components/ui/input';
 import { useNavigate } from 'react-router-dom';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import { Image } from 'lucide-react';
 
 interface BlogPost {
   id: string;
@@ -31,7 +32,7 @@ const sampleBlogPosts: BlogPost[] = [
     tags: ["React", "Hooks", "Frontend"],
     date: "2023-05-15",
     author: "Jane Doe",
-    imageUrl: "/placeholder.svg",
+    imageUrl: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
   },
   {
     id: "2",
@@ -42,7 +43,7 @@ const sampleBlogPosts: BlogPost[] = [
     tags: ["Tailwind CSS", "Responsive Design", "Frontend"],
     date: "2023-06-22",
     author: "John Smith",
-    imageUrl: "/placeholder.svg",
+    imageUrl: "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
   },
   {
     id: "3",
@@ -53,7 +54,7 @@ const sampleBlogPosts: BlogPost[] = [
     tags: ["React", "Redux", "State Management"],
     date: "2023-07-10",
     author: "Alex Johnson",
-    imageUrl: "/placeholder.svg",
+    imageUrl: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7",
   },
   {
     id: "4",
@@ -64,7 +65,7 @@ const sampleBlogPosts: BlogPost[] = [
     tags: ["TypeScript", "React", "JavaScript"],
     date: "2023-08-05",
     author: "Maya Patel",
-    imageUrl: "/placeholder.svg",
+    imageUrl: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6",
   },
   {
     id: "5",
@@ -75,7 +76,7 @@ const sampleBlogPosts: BlogPost[] = [
     tags: ["CSS", "Animations", "UX Design"],
     date: "2023-09-18",
     author: "Sophia Lee",
-    imageUrl: "/placeholder.svg",
+    imageUrl: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158",
   },
   {
     id: "6",
@@ -86,7 +87,7 @@ const sampleBlogPosts: BlogPost[] = [
     tags: ["React", "Jest", "Testing"],
     date: "2023-10-07",
     author: "Marcus Wilson",
-    imageUrl: "/placeholder.svg",
+    imageUrl: "https://images.unsplash.com/photo-1531297484001-80022131f5a1",
   },
 ];
 
@@ -179,7 +180,7 @@ const Blog = () => {
                   >
                     <div className="h-48 bg-gray-200 relative">
                       {/* Post image */}
-                      <div className="absolute inset-0 flex items-center justify-center text-gray-500">
+                      <div className="absolute inset-0">
                         {post.imageUrl ? (
                           <img 
                             src={post.imageUrl} 
@@ -187,7 +188,9 @@ const Blog = () => {
                             className="w-full h-full object-cover" 
                           />
                         ) : (
-                          "Blog Image"
+                          <div className="flex items-center justify-center h-full text-gray-500">
+                            <Image size={48} className="text-gray-400" />
+                          </div>
                         )}
                       </div>
                     </div>

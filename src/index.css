@@ -121,10 +121,27 @@
   .section-title h2 {
     @apply inline-block relative;
   }
+  
+  .text-highlight {
+    @apply text-portfolio-accent;
+  }
+  
+  .text-highlight-span span {
+    @apply text-portfolio-accent;
+  }
+}
 
-  .section-title h2:after {
-    content: '';
-    @apply absolute bottom-0 left-1/2 w-16 h-1 bg-portfolio-accent -translate-x-1/2 mt-2;
+@layer components {
+  .skill-badge {
+    @apply bg-white text-gray-800 px-4 py-2 rounded-full shadow-md hover:shadow-lg transition-all border border-gray-200 hover:border-portfolio-accent hover:text-portfolio-accent;
+  }
+  
+  .project-card {
+    @apply bg-white rounded-xl shadow-lg overflow-hidden transition-all hover:shadow-xl hover:-translate-y-1;
+  }
+  
+  .project-tag {
+    @apply bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded-md;
   }
 }
 
