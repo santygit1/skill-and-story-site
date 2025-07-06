@@ -1,250 +1,157 @@
 
-<<<<<<< HEAD
-// import { useEffect, useRef } from 'react';
-// import { Card, CardContent } from '../ui/card';
-
-// interface Skill {
-//   name: string;
-//   level: number; // 0-100
-//   category: 'frontend' | 'backend' | 'tools';
-// }
-
-// const skillsData: Skill[] = [
-//   // Frontend Skills
-//   { name: 'React', level: 90, category: 'frontend' },
-//   { name: 'JavaScript', level: 85, category: 'frontend' },
-//   { name: 'TypeScript', level: 80, category: 'frontend' },
-//   { name: 'HTML/CSS', level: 95, category: 'frontend' },
-//   // { name: 'Redux', level: 85, category: 'frontend' },
-//   { name: 'Tailwind CSS', level: 90, category: 'frontend' },
-  
-//   // Backend Skills
-//   { name: 'Node.js', level: 75, category: 'backend' },
-//   { name: 'Express', level: 70, category: 'backend' },
-//   { name: 'RESTful APIs', level: 80, category: 'backend' },
-//   { name: 'MongoDB', level: 65, category: 'backend' },
-  
-//   // Tools & Others
-//   { name: 'Git', level: 85, category: 'tools' },
-//   { name: 'Material ui', level: 75, category: 'tools' },
-//   { name: 'email.js', level: 70, category: 'tools' },
-//   { name: 'CI/CD', level: 65, category: 'tools' },
-// ];
-
-// const SkillsSection = () => {
-//   const skillsRef = useRef<HTMLDivElement>(null);
-  
-//   useEffect(() => {
-//     const observer = new IntersectionObserver(
-//       (entries) => {
-//         entries.forEach(entry => {
-//           if (entry.isIntersecting) {
-//             const progressBars = document.querySelectorAll('.skill-progress-bar');
-//             progressBars.forEach((bar, index) => {
-//               setTimeout(() => {
-//                 (bar as HTMLElement).style.width = `${skillsData[index % skillsData.length].level}%`;
-//               }, index * 100);
-//             });
-//           }
-//         });
-//       },
-//       { threshold: 0.1 }
-//     );
-    
-//     if (skillsRef.current) {
-//       observer.observe(skillsRef.current);
-//     }
-    
-//     return () => {
-//       if (skillsRef.current) {
-//         observer.unobserve(skillsRef.current);
-//       }
-//     };
-//   }, []);
-  
-//   const categories = [
-//     { id: 'frontend', name: 'Frontend' },
-//     { id: 'backend', name: 'Backend' },
-//     { id: 'tools', name: 'Tools & Others' }
-//   ];
-  
-//   return (
-//     <section id="skills" className="py-20 bg-gray-50">
-//       <div className="section-container" ref={skillsRef}>
-//         <div className="section-title">
-//           <h2 className="mb-2">My Skills</h2>
-//           <p className="text-gray-600 max-w-2xl mx-auto">
-//             Technologies and tools I work with
-//           </p>
-//         </div>
-        
-//         <div className="space-y-12">
-//           {categories.map((category) => (
-//             <div key={category.id} className="animate-fade-in-up">
-//               <h3 className="text-xl font-semibold mb-6">{category.name}</h3>
-//               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-//                 {skillsData
-//                   .filter((skill) => skill.category === category.id)
-//                   .map((skill, index) => (
-//                     <Card key={skill.name} className="overflow-hidden">
-//                       <CardContent className="p-6">
-//                         <div className="flex justify-between mb-2">
-//                           <span className="font-medium">{skill.name}</span>
-//                           <span className="text-gray-500">{skill.level}%</span>
-//                         </div>
-//                         <div className="w-full bg-gray-200 h-2 rounded-full">
-//                           <div 
-//                             className="skill-progress-bar h-full bg-portfolio-accent rounded-full transition-all duration-1000 ease-out"
-//                             style={{ width: '0%' }} // Initial width, will be animated
-//                           ></div>
-//                         </div>
-//                       </CardContent>
-//                     </Card>
-//                   ))}
-//               </div>
-//             </div>
-//           ))}
-//         </div>
-//       </div>
-//     </section>
-//   );
-// };
-
-// export default SkillsSection;
-
-
-import { useEffect, useRef } from 'react';
-=======
->>>>>>> 44f48d7e783d01eb91f77065a1e06895f24a99f2
 import { Card, CardContent } from '../ui/card';
+import { 
+  Code, 
+  Database, 
+  Globe, 
+  Palette, 
+  Users, 
+  Brain,
+  Wrench,
+  Lightbulb,
+  Heart,
+  Target
+} from 'lucide-react';
 
 interface SkillCategory {
   id: string;
   name: string;
-<<<<<<< HEAD
-  category: 'frontend' | 'backend' | 'tools';
-}
-
-const skillsData: Skill[] = [
-  // Frontend Skills
-  { name: 'React', category: 'frontend' },
-  { name: 'JavaScript', category: 'frontend' },
-  { name: 'TypeScript', category: 'frontend' },
-  { name: 'HTML/CSS', category: 'frontend' },
-  { name: 'Tailwind CSS', category: 'frontend' },
-  
-  // Backend Skills
-  { name: 'Node.js', category: 'backend' },
-  { name: 'Express', category: 'backend' },
-  { name: 'APIs', category: 'backend' },
-  { name: 'MongoDB', category: 'backend' },
-  
-  // Tools & Others
-  { name: 'Git', category: 'tools' },
-  { name: 'Material UI', category: 'tools' },
-  { name: 'email.js', category: 'tools' },
-  // { name: 'CI/CD', category: 'tools' },
-];
-
-const SkillsSection = () => {
-  const skillsRef = useRef<HTMLDivElement>(null);
-  
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            // You can keep this if you want to animate something else in the future
-          }
-        });
-      },
-      { threshold: 0.1 }
-    );
-    
-    if (skillsRef.current) {
-      observer.observe(skillsRef.current);
-    }
-    
-    return () => {
-      if (skillsRef.current) {
-        observer.unobserve(skillsRef.current);
-      }
-    };
-  }, []);
-  
-  const categories = [
-    { id: 'frontend', name: 'Frontend' },
-    { id: 'backend', name: 'Backend' },
-    { id: 'tools', name: 'Tools & Others' }
-  ];
-  
-=======
-  skills: string[];
+  icon: typeof Code;
+  skills: Array<{ name: string; level: 'Beginner' | 'Intermediate' | 'Advanced' | 'Expert' }>;
+  color: string;
 }
 
 const skillsData: SkillCategory[] = [
   {
     id: 'frontend',
-    name: 'Frontend',
-    skills: ['HTML', 'CSS', 'JavaScript', 'React.js', 'Tailwind CSS', 'Material UI']
+    name: 'Frontend & UI',
+    icon: Palette,
+    color: 'from-cosmic-purple to-cosmic-blue',
+    skills: [
+      { name: 'React.js', level: 'Advanced' },
+      { name: 'JavaScript', level: 'Advanced' },
+      { name: 'TypeScript', level: 'Intermediate' },
+      { name: 'HTML/CSS', level: 'Expert' },
+      { name: 'Tailwind CSS', level: 'Advanced' },
+      { name: 'Material UI', level: 'Intermediate' }
+    ]
   },
   {
     id: 'backend',
-    name: 'Backend',
-    skills: ['Node.js', 'Express.js', 'MongoDB', 'Firebase']
+    name: 'Backend & Data',
+    icon: Database,
+    color: 'from-sky-blue to-cosmic-blue',
+    skills: [
+      { name: 'Node.js', level: 'Intermediate' },
+      { name: 'Express.js', level: 'Intermediate' },
+      { name: 'MongoDB', level: 'Intermediate' },
+      { name: 'Firebase', level: 'Intermediate' },
+      { name: 'RESTful APIs', level: 'Advanced' }
+    ]
   },
   {
     id: 'tools',
-    name: 'Tools & Others',
-    skills: ['Git & GitHub', 'VS Code', 'Postman', 'Netlify', 'Figma']
+    name: 'Tools & DevOps',
+    icon: Wrench,
+    color: 'from-peach to-cosmic-purple',
+    skills: [
+      { name: 'Git & GitHub', level: 'Advanced' },
+      { name: 'VS Code', level: 'Expert' },
+      { name: 'Postman', level: 'Advanced' },
+      { name: 'Netlify', level: 'Intermediate' },
+      { name: 'Figma', level: 'Intermediate' }
+    ]
+  },
+  {
+    id: 'ai',
+    name: 'AI & Innovation',
+    icon: Brain,
+    color: 'from-cosmic-blue to-peach',
+    skills: [
+      { name: 'AI Strategy', level: 'Intermediate' },
+      { name: 'Product Thinking', level: 'Advanced' },
+      { name: 'System Design', level: 'Intermediate' },
+      { name: 'Innovation', level: 'Advanced' }
+    ]
+  },
+  {
+    id: 'soft',
+    name: 'Leadership & Strategy',
+    icon: Heart,
+    color: 'from-peach to-sky-blue',
+    skills: [
+      { name: 'Empathy', level: 'Expert' },
+      { name: 'Strategic Thinking', level: 'Advanced' },
+      { name: 'Team Leadership', level: 'Advanced' },
+      { name: 'Problem Solving', level: 'Expert' },
+      { name: 'Communication', level: 'Advanced' }
+    ]
   }
 ];
 
 const SkillsSection = () => {
->>>>>>> 44f48d7e783d01eb91f77065a1e06895f24a99f2
+  const getLevelColor = (level: string) => {
+    switch (level) {
+      case 'Expert': return 'bg-gradient-to-r from-cosmic-purple to-cosmic-blue text-white';
+      case 'Advanced': return 'bg-gradient-to-r from-cosmic-blue to-sky-blue text-white';
+      case 'Intermediate': return 'bg-sky-blue/80 text-cosmic-purple';
+      case 'Beginner': return 'bg-peach/80 text-cosmic-purple';
+      default: return 'bg-gray-200 text-gray-700';
+    }
+  };
+
   return (
-    <section id="skills" className="py-20 bg-gray-50">
+    <section id="skills" className="py-20 bg-gradient-to-br from-sky-blue/10 via-white to-peach/10">
       <div className="section-container">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold mb-4">My Skills</h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
-            Technologies and tools I work with
+        <div className="text-center mb-16">
+          <h2 className="text-cosmic-purple mb-4">My Expertise</h2>
+          <p className="text-cosmic-purple/70 max-w-2xl mx-auto text-lg">
+            A diverse toolkit spanning technology, strategy, and human-centered design
           </p>
         </div>
         
-        <div className="space-y-12">
-          {skillsData.map((category) => (
-            <div key={category.id} className="animate-fade-in-up">
-<<<<<<< HEAD
-              <h3 className="text-xl font-semibold mb-6">{category.name}</h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {skillsData
-                  .filter((skill) => skill.category === category.id)
-                  .map((skill) => (
-                    <Card key={skill.name} className="overflow-hidden">
-                      <CardContent className="p-6">
-                        <div className="flex justify-between mb-2">
-                          <span className="font-medium">{skill.name}</span>
-                          {/* Removed the level display */}
-                        </div>
-                        {/* Removed the progress bar */}
-                      </CardContent>
-                    </Card>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {skillsData.map((category, categoryIndex) => (
+            <Card 
+              key={category.id} 
+              className="group overflow-hidden hover:shadow-2xl transition-all duration-500 bg-white/80 backdrop-blur-sm border border-white/50 rounded-2xl animate-fade-in-up"
+              style={{ animationDelay: `${categoryIndex * 0.1}s` }}
+            >
+              <CardContent className="p-6">
+                {/* Category Header */}
+                <div className="text-center mb-6">
+                  <div className={`inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r ${category.color} mb-4 group-hover:scale-110 transition-transform duration-300`}>
+                    <category.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-serif text-cosmic-purple">{category.name}</h3>
+                </div>
+
+                {/* Skills Grid */}
+                <div className="space-y-3">
+                  {category.skills.map((skill, skillIndex) => (
+                    <div 
+                      key={skill.name} 
+                      className="flex items-center justify-between p-3 rounded-xl bg-creamy-beige/50 hover:bg-creamy-beige/70 transition-all duration-200 group/skill"
+                    >
+                      <span className="font-medium text-cosmic-purple group-hover/skill:text-cosmic-blue transition-colors">
+                        {skill.name}
+                      </span>
+                      <span className={`px-3 py-1 rounded-full text-xs font-semibold ${getLevelColor(skill.level)} transition-all duration-200`}>
+                        {skill.level}
+                      </span>
+                    </div>
                   ))}
-=======
-              <h3 className="text-xl font-semibold mb-6 text-center">{category.name}</h3>
-              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
-                {category.skills.map((skill, index) => (
-                  <Card key={index} className="overflow-hidden hover:shadow-lg transition-shadow duration-300">
-                    <CardContent className="p-4 text-center">
-                      <span className="font-medium">{skill}</span>
-                    </CardContent>
-                  </Card>
-                ))}
->>>>>>> 44f48d7e783d01eb91f77065a1e06895f24a99f2
-              </div>
-            </div>
+                </div>
+              </CardContent>
+            </Card>
           ))}
+        </div>
+
+        {/* Bottom tagline */}
+        <div className="text-center mt-12 animate-fade-in-up" style={{ animationDelay: '0.8s' }}>
+          <p className="text-cosmic-purple/60 font-serif italic text-lg">
+            "Lifelong learner. Curious always."
+          </p>
         </div>
       </div>
     </section>

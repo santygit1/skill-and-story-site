@@ -1,83 +1,91 @@
 
 import { Button } from '../ui/button';
-import { Download } from 'lucide-react';
+import { Download, Award, Users, Rocket } from 'lucide-react';
 
 const AboutSection = () => {
-  // This will be replaced with your actual final resume file
   const resumeUrl = '/https://docs.google.com/document/d/1SeYZL9oWxpJfgMFXzbxCg84RL7n_abHp/edit?usp=drive_link&ouid=101457459427532664424&rtpof=true&sd=true';
   
   const handleDownload = () => {
-    // In a real implementation, this could track the download event
     console.log('Resume download initiated');
   };
+
+  const metrics = [
+    { icon: Rocket, label: '10+ Projects', subtitle: 'Built & Deployed' },
+    { icon: Users, label: '3 Startups', subtitle: 'Co-Built' },
+    { icon: Award, label: 'AI Systems', subtitle: 'Designer' }
+  ];
   
   return (
-    <section id="about" className="py-20 bg-white">
+    <section id="about" className="py-20 bg-gradient-to-br from-white via-creamy-beige/30 to-sky-blue/20">
       <div className="section-container">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold mb-4">About Me</h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
-            Get to know me better
+        <div className="text-center mb-16">
+          <h2 className="text-cosmic-purple mb-4">Hi, I'm Santhosh 👋</h2>
+          <p className="text-cosmic-purple/70 max-w-3xl mx-auto text-lg leading-relaxed">
+            A passionate technologist with an entrepreneurial spirit, I bridge the gap between innovative ideas and impactful solutions. 
+            My journey spans AI systems, full-stack development, and product strategy, driven by curiosity and the desire to create meaningful change.
           </p>
         </div>
+
+        {/* Impact Metrics */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+          {metrics.map((metric, index) => (
+            <div 
+              key={metric.label} 
+              className="metric-card text-center group cursor-pointer animate-fade-in-up"
+              style={{ animationDelay: `${index * 0.2}s` }}
+            >
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-cosmic-purple to-cosmic-blue rounded-full mb-4 group-hover:scale-110 transition-transform duration-300">
+                <metric.icon className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-serif text-cosmic-purple mb-1">{metric.label}</h3>
+              <p className="text-cosmic-purple/60 font-medium">{metric.subtitle}</p>
+            </div>
+          ))}
+        </div>
         
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          <div className="overflow-hidden rounded-lg shadow-lg animate-fade-in-up">
-            <div className="h-96 w-full relative">
-              {/* Updated profile photo */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          {/* Profile Image */}
+          <div className="order-2 lg:order-1 overflow-hidden rounded-3xl shadow-2xl animate-fade-in-up bg-gradient-to-br from-white/50 to-sky-blue/30 backdrop-blur-sm border border-white/50">
+            <div className="h-96 w-full relative p-4">
               <img 
                 src="/lovable-uploads/aa9a8458-e2b6-489d-8b36-4d8e62706bae.png" 
                 alt="Santhosh Kumar" 
-                className="w-full h-full object-cover object-center"
+                className="w-full h-full object-cover object-center rounded-2xl"
               />
             </div>
           </div>
           
-          <div className="space-y-6 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-            <h3 className="text-2xl font-bold">
-              I'm <span className="text-portfolio-accent">Santhosh Kumar</span>, a Full Stack Developer
-            </h3>
-            
-            <p className="text-gray-700">
-<<<<<<< HEAD
-            I'm a passionate full stack developer skilled in building seamless web applications from front to back.
-            I work with modern technologies like React, Tailwind CSS, JavaScript, Bootstrap, EmailJS and LocalStorage to deliver responsive UIs, 
-            while also handling backend logic and integrations to ensure complete, user-centric solutions.
-
-
-            </p>
-            
-            <p className="text-gray-700">
-            I'm a strategic, creative thinker with hands-on experience in marketing, operations and team coordination. 
-            I turn ideas into action building brand presence, streamlining processes and leading initiatives that drive growth with empathy, adaptability and impact.
-
-
-=======
-              I'm a passionate full stack developer with a strong focus on building scalable, end-to-end web applications. 
-              I specialize in technologies like <span className="text-portfolio-accent">React, Tailwind CSS, Node.js, Express and MongoDB</span>, crafting clean user 
-              interfaces and robust backend systems.
-            </p>
-            
-            <p className="text-gray-700">
-              I enjoy solving real-world problems through code, blending functionality with design to create impactful 
-              digital experiences.
->>>>>>> 44f48d7e783d01eb91f77065a1e06895f24a99f2
-            </p>
+          {/* Content */}
+          <div className="order-1 lg:order-2 space-y-8 animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
+            <div className="space-y-6">
+              <h3 className="text-3xl font-serif text-cosmic-purple leading-tight">
+                Crafting Tomorrow's Solutions Today
+              </h3>
+              
+              <div className="space-y-4 text-cosmic-purple/80 leading-relaxed">
+                <p>
+                  I'm a passionate full stack developer skilled in building seamless web applications from front to back. 
+                  I work with modern technologies like <span className="text-cosmic-blue font-semibold">React, Tailwind CSS, JavaScript, and Node.js</span> to deliver responsive UIs, 
+                  while also handling backend logic and integrations to ensure complete, user-centric solutions.
+                </p>
+                
+                <p>
+                  Beyond development, I'm a strategic, creative thinker with hands-on experience in marketing, operations and team coordination. 
+                  I turn ideas into action, building brand presence, streamlining processes and leading initiatives that drive growth with 
+                  <span className="text-cosmic-blue font-semibold"> empathy, adaptability and impact</span>.
+                </p>
+              </div>
+            </div>
             
             <div className="pt-4">
               <Button 
                 asChild
                 size="lg" 
-                className="bg-portfolio-accent hover:bg-portfolio-blue flex items-center gap-2"
+                className="bg-gradient-to-r from-cosmic-purple to-cosmic-blue hover:from-cosmic-blue hover:to-cosmic-purple text-white shadow-lg hover:shadow-xl transition-all duration-300 rounded-full px-8 py-3 group"
                 onClick={handleDownload}
               >
-<<<<<<< HEAD
-                <a href={resumeUrl} download="final resume.pdf">
-=======
                 <a href={resumeUrl} download="Santhosh_Kumar_Resume.pdf">
->>>>>>> 44f48d7e783d01eb91f77065a1e06895f24a99f2
-                  <Download className="h-5 w-5" />
+                  <Download className="h-5 w-5 mr-2 group-hover:animate-bounce" />
                   Download Resume
                 </a>
               </Button>

@@ -1,4 +1,5 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=DM+Serif+Display:wght@400&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -14,7 +15,7 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 204 86% 53%;
+    --primary: 236 56% 35%;
     --primary-foreground: 210 40% 98%;
 
     --secondary: 210 40% 96.1%;
@@ -33,7 +34,7 @@
     --input: 214.3 31.8% 91.4%;
     --ring: 222.2 84% 4.9%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -46,17 +47,17 @@
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
+    --background: 236 56% 10%;
     --foreground: 210 40% 98%;
 
-    --card: 222.2 84% 4.9%;
+    --card: 236 56% 12%;
     --card-foreground: 210 40% 98%;
 
-    --popover: 222.2 84% 4.9%;
+    --popover: 236 56% 12%;
     --popover-foreground: 210 40% 98%;
 
     --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary-foreground: 236 56% 15%;
 
     --secondary: 217.2 32.6% 17.5%;
     --secondary-foreground: 210 40% 98%;
@@ -73,7 +74,7 @@
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
     --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
+    --sidebar-background: 236 56% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
     --sidebar-primary-foreground: 0 0% 100%;
@@ -91,19 +92,21 @@
 
   body {
     @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
     font-feature-settings: "rlig" 1, "calt" 1;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-bold tracking-tight;
+    font-family: 'DM Serif Display', serif;
+    @apply font-normal tracking-tight;
   }
 
   h1 {
-    @apply text-4xl sm:text-5xl md:text-6xl;
+    @apply text-4xl sm:text-5xl md:text-6xl lg:text-7xl;
   }
 
   h2 {
-    @apply text-3xl sm:text-4xl;
+    @apply text-3xl sm:text-4xl md:text-5xl;
   }
 
   h3 {
@@ -119,29 +122,37 @@
   }
 
   .section-title h2 {
-    @apply inline-block relative;
+    @apply inline-block relative text-cosmic-purple;
   }
   
   .text-highlight {
-    @apply text-portfolio-accent;
+    @apply text-cosmic-blue;
   }
   
   .text-highlight-span span {
-    @apply text-portfolio-accent;
+    @apply text-cosmic-blue;
   }
 }
 
 @layer components {
   .skill-badge {
-    @apply bg-white text-gray-800 px-4 py-2 rounded-full shadow-md hover:shadow-lg transition-all border border-gray-200 hover:border-portfolio-accent hover:text-portfolio-accent;
+    @apply bg-creamy-beige/80 backdrop-blur-sm text-cosmic-purple px-4 py-2 rounded-full shadow-md hover:shadow-lg transition-all border border-sky-blue/30 hover:border-cosmic-blue hover:text-cosmic-blue hover:scale-105;
   }
   
   .project-card {
-    @apply bg-white rounded-xl shadow-lg overflow-hidden transition-all hover:shadow-xl hover:-translate-y-1;
+    @apply bg-white/80 backdrop-blur-sm rounded-2xl shadow-lg overflow-hidden transition-all hover:shadow-2xl hover:-translate-y-2 hover:bg-white/90 border border-sky-blue/20;
   }
   
   .project-tag {
-    @apply bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded-md;
+    @apply bg-sky-blue/20 text-cosmic-purple text-xs px-3 py-1 rounded-full font-medium;
+  }
+
+  .glassmorphism {
+    @apply bg-white/20 backdrop-blur-lg border border-white/30 rounded-2xl;
+  }
+
+  .metric-card {
+    @apply bg-gradient-to-br from-sky-blue/10 to-peach/10 backdrop-blur-sm border border-sky-blue/30 rounded-2xl p-6 hover:scale-105 transition-all duration-300;
   }
 }
 
@@ -151,20 +162,39 @@
   }
 }
 
-/* Custom scroll for the entire page */
+/* Custom animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 20px rgba(30, 42, 120, 0.2); }
+  50% { box-shadow: 0 0 40px rgba(30, 42, 120, 0.4); }
+}
+
+.float-animation {
+  animation: float 6s ease-in-out infinite;
+}
+
+.pulse-glow {
+  animation: pulse-glow 3s ease-in-out infinite;
+}
+
+/* Custom scroll */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  background: #F3E9DC;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #888;
-  border-radius: 5px;
+  background: #3E2C84;
+  border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #555;
+  background: #1E2A78;
 }
