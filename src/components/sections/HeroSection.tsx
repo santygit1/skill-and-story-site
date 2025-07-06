@@ -1,4 +1,3 @@
-
 import { useEffect, useRef } from 'react';
 import { Button } from '../ui/button';
 import { ArrowDown, Sparkles, Code, Lightbulb } from 'lucide-react';
@@ -33,7 +32,7 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center bg-gradient-to-br from-creamy-beige via-sky-blue/20 to-peach/30 overflow-hidden">
+    <section id="hero" className="relative min-h-screen flex items-center bg-gradient-to-br from-creamy-beige via-sky-blue/20 to-peach/30 overflow-hidden pt-20">
       {/* Animated Background Elements */}
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 opacity-30">
@@ -69,7 +68,7 @@ const HeroSection = () => {
       >
         <div className="max-w-5xl mx-auto text-center">
           {/* Profile Avatar */}
-          <div className="mb-8 flex justify-center animate-fade-in-up">
+          <div className="mb-12 mt-8 flex justify-center animate-fade-in-up">
             <div className="relative">
               <div className="w-40 h-40 md:w-48 md:h-48 rounded-full overflow-hidden shadow-2xl ring-4 ring-white/50 backdrop-blur-sm animate-glow">
                 <img 
@@ -109,19 +108,29 @@ const HeroSection = () => {
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row justify-center gap-4 animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
             <Button 
-              asChild 
+              onClick={() => {
+                const projectsSection = document.getElementById('projects');
+                if (projectsSection) {
+                  projectsSection.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
               size="lg" 
               className="bg-gradient-to-r from-cosmic-purple to-cosmic-blue hover:from-cosmic-blue hover:to-cosmic-purple text-white shadow-lg hover:shadow-xl transition-all duration-300 rounded-full px-8 py-3"
             >
-              <a href="#projects">Explore Portfolio</a>
+              Explore Portfolio
             </Button>
             <Button 
-              asChild 
+              onClick={() => {
+                const contactSection = document.getElementById('contact');
+                if (contactSection) {
+                  contactSection.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
               variant="outline" 
               size="lg"
               className="border-2 border-cosmic-purple text-cosmic-purple hover:bg-cosmic-purple hover:text-white rounded-full px-8 py-3 backdrop-blur-sm bg-white/50 transition-all duration-300"
             >
-              <a href="#contact">Let's Connect</a>
+              Let's Connect
             </Button>
           </div>
         </div>

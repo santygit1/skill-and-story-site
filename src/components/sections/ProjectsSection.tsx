@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Card, CardContent } from '../ui/card';
@@ -108,7 +107,6 @@ const ProjectsSection = () => {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               whileHover={{ y: -10 }}
             >
-              {/* Project Image */}
               <div className="h-48 bg-gradient-to-br from-cosmic-purple/10 to-cosmic-blue/10 relative overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-br from-transparent to-cosmic-purple/20"></div>
                 <img 
@@ -133,12 +131,10 @@ const ProjectsSection = () => {
                   }}
                 />
                 
-                {/* Project Icon */}
                 <div className="absolute top-4 left-4 p-2 bg-white/90 backdrop-blur-sm rounded-full shadow-lg">
                   <project.icon className="w-5 h-5 text-cosmic-purple" />
                 </div>
                 
-                {/* Overlay with buttons on hover */}
                 <div className="absolute inset-0 bg-gradient-to-t from-cosmic-purple/90 via-cosmic-purple/50 to-transparent opacity-0 group-hover:opacity-100 flex items-center justify-center gap-3 transition-all duration-300">
                   {project.codeUrl && (
                     <Button 
@@ -187,20 +183,6 @@ const ProjectsSection = () => {
               </CardContent>
             </MotionCard>
           ))}
-        </div>
-
-        {/* GitHub Profile Link Instructions */}
-        <div className="mt-16 text-center">
-          <div className="bg-white/80 backdrop-blur-sm border border-sky-blue/30 rounded-2xl p-8 max-w-2xl mx-auto">
-            <h3 className="text-xl font-serif text-cosmic-purple mb-4">Want to see more?</h3>
-            <p className="text-cosmic-purple/70 mb-6">
-              To update the GitHub links in your projects, edit the <code className="bg-cosmic-purple/10 px-2 py-1 rounded text-cosmic-purple">codeUrl</code> field 
-              in each project object within the <code className="bg-cosmic-purple/10 px-2 py-1 rounded text-cosmic-purple">projectsData</code> array.
-            </p>
-            <p className="text-sm text-cosmic-purple/60">
-              Replace the placeholder URLs with your actual GitHub repository links to make them functional.
-            </p>
-          </div>
         </div>
       </div>
     </section>

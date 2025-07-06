@@ -25,13 +25,20 @@ const Navbar = () => {
     setIsOpen(!isOpen);
   };
 
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+    setIsOpen(false);
+  };
+
   const navLinks = [
-    { name: 'Home', path: '/' },
-    { name: 'About', path: '/#about' },
-    { name: 'Skills', path: '/#skills' },
-    { name: 'Projects', path: '/#projects' },
-    { name: 'Blog', path: '/blog' },
-    { name: 'Contact', path: '/#contact' },
+    { name: 'Home', id: 'hero' },
+    { name: 'About', id: 'about' },
+    { name: 'Skills', id: 'tools' },
+    { name: 'Projects', id: 'projects' },
+    { name: 'Contact', id: 'contact' },
   ];
 
   return (
@@ -43,26 +50,29 @@ const Navbar = () => {
       }`}
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
-        <Link to="/" className="text-2xl font-serif font-bold text-cosmic-purple hover:text-cosmic-blue transition-colors duration-300">
+        <button 
+          onClick={() => scrollToSection('hero')}
+          className="text-2xl font-serif font-bold text-cosmic-purple hover:text-cosmic-blue transition-colors duration-300"
+        >
           <span className="text-cosmic-blue">Santhosh</span> Kumar
-        </Link>
+        </button>
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-8">
           {navLinks.map((link) => (
-            <Link
+            <button
               key={link.name}
-              to={link.path}
+              onClick={() => scrollToSection(link.id)}
               className="relative text-cosmic-purple hover:text-cosmic-blue transition-colors duration-300 font-medium after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-cosmic-blue after:transition-all after:duration-300 hover:after:w-full"
             >
               {link.name}
-            </Link>
+            </button>
           ))}
           <Button 
-            asChild 
+            onClick={() => scrollToSection('contact')}
             className="bg-gradient-to-r from-cosmic-purple to-cosmic-blue hover:from-cosmic-blue hover:to-cosmic-purple text-white shadow-lg hover:shadow-xl transition-all duration-300 rounded-full px-6"
           >
-            <a href="/#contact">Get In Touch</a>
+            Get In Touch
           </Button>
         </div>
 
@@ -84,20 +94,19 @@ const Navbar = () => {
         <div className="md:hidden bg-white/95 backdrop-blur-md border-t border-sky-blue/20 shadow-lg">
           <div className="container mx-auto px-4 py-6 flex flex-col space-y-4">
             {navLinks.map((link) => (
-              <Link
+              <button
                 key={link.name}
-                to={link.path}
-                onClick={() => setIsOpen(false)}
-                className="text-cosmic-purple hover:text-cosmic-blue py-2 transition-colors duration-300 font-medium border-b border-transparent hover:border-cosmic-blue/30"
+                onClick={() => scrollToSection(link.id)}
+                className="text-cosmic-purple hover:text-cosmic-blue py-2 transition-colors duration-300 font-medium border-b border-transparent hover:border-cosmic-blue/30 text-left"
               >
                 {link.name}
-              </Link>
+              </button>
             ))}
             <Button 
-              asChild 
+              onClick={() => scrollToSection('contact')}
               className="bg-gradient-to-r from-cosmic-purple to-cosmic-blue hover:from-cosmic-blue hover:to-cosmic-purple text-white shadow-lg hover:shadow-xl transition-all duration-300 rounded-full mt-4"
             >
-              <a href="/#contact" onClick={() => setIsOpen(false)}>Get In Touch</a>
+              Get In Touch
             </Button>
           </div>
         </div>

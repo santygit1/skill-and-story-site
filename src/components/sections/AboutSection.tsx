@@ -1,19 +1,13 @@
 
 import { Button } from '../ui/button';
-import { Download, Award, Users, Rocket } from 'lucide-react';
+import { Eye } from 'lucide-react';
 
 const AboutSection = () => {
-  const resumeUrl = '/https://docs.google.com/document/d/1SeYZL9oWxpJfgMFXzbxCg84RL7n_abHp/edit?usp=drive_link&ouid=101457459427532664424&rtpof=true&sd=true';
+  const resumeUrl = 'https://docs.google.com/document/d/1SeYZL9oWxpJfgMFXzbxCg84RL7n_abHp/edit?usp=drive_link&ouid=101457459427532664424&rtpof=true&sd=true';
   
-  const handleDownload = () => {
-    console.log('Resume download initiated');
+  const handleViewResume = () => {
+    window.open(resumeUrl, '_blank');
   };
-
-  const metrics = [
-    { icon: Rocket, label: '10+ Projects', subtitle: 'Built & Deployed' },
-    { icon: Users, label: '3 Startups', subtitle: 'Co-Built' },
-    { icon: Award, label: 'AI Systems', subtitle: 'Designer' }
-  ];
   
   return (
     <section id="about" className="py-20 bg-gradient-to-br from-white via-creamy-beige/30 to-sky-blue/20">
@@ -24,23 +18,6 @@ const AboutSection = () => {
             A passionate technologist with an entrepreneurial spirit, I bridge the gap between innovative ideas and impactful solutions. 
             My journey spans AI systems, full-stack development, and product strategy, driven by curiosity and the desire to create meaningful change.
           </p>
-        </div>
-
-        {/* Impact Metrics */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
-          {metrics.map((metric, index) => (
-            <div 
-              key={metric.label} 
-              className="metric-card text-center group cursor-pointer animate-fade-in-up"
-              style={{ animationDelay: `${index * 0.2}s` }}
-            >
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-cosmic-purple to-cosmic-blue rounded-full mb-4 group-hover:scale-110 transition-transform duration-300">
-                <metric.icon className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-xl font-serif text-cosmic-purple mb-1">{metric.label}</h3>
-              <p className="text-cosmic-purple/60 font-medium">{metric.subtitle}</p>
-            </div>
-          ))}
         </div>
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -79,15 +56,12 @@ const AboutSection = () => {
             
             <div className="pt-4">
               <Button 
-                asChild
                 size="lg" 
                 className="bg-gradient-to-r from-cosmic-purple to-cosmic-blue hover:from-cosmic-blue hover:to-cosmic-purple text-white shadow-lg hover:shadow-xl transition-all duration-300 rounded-full px-8 py-3 group"
-                onClick={handleDownload}
+                onClick={handleViewResume}
               >
-                <a href={resumeUrl} download="Santhosh_Kumar_Resume.pdf">
-                  <Download className="h-5 w-5 mr-2 group-hover:animate-bounce" />
-                  Download Resume
-                </a>
+                <Eye className="h-5 w-5 mr-2 group-hover:animate-pulse" />
+                View Resume
               </Button>
             </div>
           </div>
