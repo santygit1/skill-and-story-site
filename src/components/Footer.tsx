@@ -1,21 +1,12 @@
 
-import { Link } from "react-router-dom";
-import { Github, Linkedin, Heart, Code, Database, Palette, Globe, Wrench, Users, BarChart3, Target, Brain } from "lucide-react";
+import { Github, Linkedin, Heart } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
-  const toolIcons = [
-    { icon: Code, name: 'React' },
-    { icon: Database, name: 'Node.js' },
-    { icon: Palette, name: 'CSS3' },
-    { icon: Globe, name: 'JavaScript' },
-    { icon: Wrench, name: 'Git' },
-    { icon: Users, name: 'Jira' },
-    { icon: BarChart3, name: 'Analytics' },
-    { icon: Target, name: 'Strategy' },
-    { icon: Brain, name: 'AI Tools' },
-    { icon: Palette, name: 'Figma' }
+  const toolLogos = [
+    '⚛️', '🟢', '🎨', '⚡', '📝', '📋', '📊', '🎯', '🤖', '🎭',
+    '🌊', '📢', '📓', '🐙', '💻', '🌐', '🚀', '🍃', '📌', '📈'
   ];
 
   return (
@@ -25,17 +16,16 @@ const Footer = () => {
         <div className="mb-12">
           <h4 className="text-center text-lg font-semibold mb-6 text-sky-blue">My Technology Stack</h4>
           <div className="flex flex-wrap justify-center gap-4">
-            {toolIcons.map((tool, index) => (
+            {toolLogos.map((logo, index) => (
               <div 
-                key={tool.name}
-                className="group p-3 bg-white/10 backdrop-blur-sm rounded-full hover:bg-white/20 transition-all duration-300 border border-white/20 hover:scale-110 animate-float"
+                key={index}
+                className="group p-3 bg-white/10 backdrop-blur-sm rounded-full hover:bg-white/20 transition-all duration-300 border border-white/20 hover:scale-110 animate-float text-2xl"
                 style={{ 
-                  animationDelay: `${index * 0.2}s`,
+                  animationDelay: `${index * 0.1}s`,
                   animationDuration: '3s'
                 }}
-                title={tool.name}
               >
-                <tool.icon className="w-6 h-6 group-hover:scale-110 transition-transform duration-300" />
+                {logo}
               </div>
             ))}
           </div>
@@ -61,61 +51,19 @@ const Footer = () => {
           <div className="text-center">
             <h4 className="text-lg font-semibold mb-4 text-sky-blue">Quick Links</h4>
             <ul className="space-y-3">
-              <li>
-                <button 
-                  onClick={() => {
-                    const element = document.getElementById('hero');
-                    element?.scrollIntoView({ behavior: 'smooth' });
-                  }}
-                  className="text-white/80 hover:text-white transition-colors duration-300 hover:underline"
-                >
-                  Home
-                </button>
-              </li>
-              <li>
-                <button 
-                  onClick={() => {
-                    const element = document.getElementById('about');
-                    element?.scrollIntoView({ behavior: 'smooth' });
-                  }}
-                  className="text-white/80 hover:text-white transition-colors duration-300 hover:underline"
-                >
-                  About
-                </button>
-              </li>
-              <li>
-                <button 
-                  onClick={() => {
-                    const element = document.getElementById('projects');
-                    element?.scrollIntoView({ behavior: 'smooth' });
-                  }}
-                  className="text-white/80 hover:text-white transition-colors duration-300 hover:underline"
-                >
-                  Projects
-                </button>
-              </li>
-              <li>
-                <button 
-                  onClick={() => {
-                    const element = document.getElementById('tools');
-                    element?.scrollIntoView({ behavior: 'smooth' });
-                  }}
-                  className="text-white/80 hover:text-white transition-colors duration-300 hover:underline"
-                >
-                  Skills
-                </button>
-              </li>
-              <li>
-                <button 
-                  onClick={() => {
-                    const element = document.getElementById('contact');
-                    element?.scrollIntoView({ behavior: 'smooth' });
-                  }}
-                  className="text-white/80 hover:text-white transition-colors duration-300 hover:underline"
-                >
-                  Contact
-                </button>
-              </li>
+              {['hero', 'about', 'projects', 'tools', 'contact'].map((section) => (
+                <li key={section}>
+                  <button 
+                    onClick={() => {
+                      const element = document.getElementById(section);
+                      element?.scrollIntoView({ behavior: 'smooth' });
+                    }}
+                    className="text-white/80 hover:text-white transition-colors duration-300 hover:underline capitalize"
+                  >
+                    {section === 'hero' ? 'Home' : section}
+                  </button>
+                </li>
+              ))}
             </ul>
           </div>
 
@@ -133,7 +81,7 @@ const Footer = () => {
               </a>
               
               <a 
-                href="https://linkedin.com/in/santhosh-kumar-a6a2a9288" 
+                href="https://www.linkedin.com/in/santhosh-kumar-94824b328/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="group p-3 bg-white/10 backdrop-blur-sm rounded-full hover:bg-white/20 transition-all duration-300 border border-white/20 hover:scale-110"
@@ -142,7 +90,7 @@ const Footer = () => {
               </a>
             </div>
             <div className="text-sm text-white/70">
-              <p>santy.santhoshkumar5002@gmail.com</p>
+              <p>santhosh2027ug@buildwithivb.com</p>
               <p className="mt-1">Based in India</p>
             </div>
           </div>

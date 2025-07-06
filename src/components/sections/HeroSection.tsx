@@ -1,3 +1,4 @@
+
 import { useEffect, useRef } from 'react';
 import { Button } from '../ui/button';
 import { ArrowDown, Sparkles, Code, Lightbulb } from 'lucide-react';
@@ -32,7 +33,7 @@ const HeroSection = () => {
   };
 
   return (
-    <section id="hero" className="relative min-h-screen flex items-center bg-gradient-to-br from-creamy-beige via-sky-blue/20 to-peach/30 overflow-hidden pt-20">
+    <section id="hero" className="relative min-h-[100vh] flex items-center bg-gradient-to-br from-creamy-beige via-sky-blue/20 to-peach/30 overflow-hidden pt-24">
       {/* Animated Background Elements */}
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 opacity-30">
@@ -68,9 +69,9 @@ const HeroSection = () => {
       >
         <div className="max-w-5xl mx-auto text-center">
           {/* Profile Avatar */}
-          <div className="mb-12 mt-8 flex justify-center animate-fade-in-up">
+          <div className="mb-8 flex justify-center animate-fade-in-up">
             <div className="relative">
-              <div className="w-40 h-40 md:w-48 md:h-48 rounded-full overflow-hidden shadow-2xl ring-4 ring-white/50 backdrop-blur-sm animate-glow">
+              <div className="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden shadow-2xl ring-4 ring-white/50 backdrop-blur-sm animate-glow">
                 <img 
                   src="/lovable-uploads/aa9a8458-e2b6-489d-8b36-4d8e62706bae.png" 
                   alt="Santhosh Kumar" 
@@ -137,7 +138,7 @@ const HeroSection = () => {
       </div>
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
         <Button 
           variant="ghost" 
           size="icon" 
